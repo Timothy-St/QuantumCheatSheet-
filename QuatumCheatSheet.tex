@@ -1,0 +1,92 @@
+%%% DOCUMENT TYPE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%% SETUP %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{setup/MAIN.tex}
+\usepackage[arrow, matrix, curve]{xy}
+\usepackage{wrapfig}
+\usepackage{bm}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{mathrsfs} 
+\renewcommand\vec{\boldsymbol}
+
+%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\section{Stuff dump}
+
+\paragraph{Cambell Baker Hausdorf} Für alle $t \in \mathbb{R}$ 
+$$ 
+\exp(t A) \exp(t B)= \exp \left(t A+t B+\frac{t^2}{2}[A, B]
++\frac{t^3}{12} [A,[A, B]] +\frac{t^3}{12}[B,[B, A]]+\mathscr{O}\left(t^4\right)\right)
+$$
+ 
+
+
+\paragraph{Bernoulli Trial} Probability of $k$ successes in a bernoulli experiment $B(n,p)$:
+$$P(k)=\left(\begin{array}{l}
+  n \\
+  k
+  \end{array}\right) p^k q^{n-k} $$
+
+\paragraph{Bayes' rule}  $$
+\operatorname{Pr}[A \mid B \wedge C]=\frac{\operatorname{Pr}[B \mid A \wedge C]}{\operatorname{Pr}[B \mid C]} \operatorname{Pr}[A \mid C]
+$$
+
+\paragraph{Maxwell equations} we have \\
+$ \nabla E = \frac{\rho}{\epsilon_0}  \quad  $  \ (Gauss law)   \\
+$ \nabla B = 0 $ \\
+$ \nabla \times E = \ - \frac{\partial B}{\partial t} \quad  $ \  (Faraday's law of induction) \\
+$ \nabla \times B = \frac{1}{c^2} \frac{ \partial E}{\partial t} + \mu_0 J + \epsilon_0 \frac{\partial P} {\partial t} \quad $ \ (Ampere's law)
+
+
+\paragraph{Bloch sphere}$\hat{n}(\theta, \phi)$ on Bloch sphere with $\theta \in (0, \pi)$, $\phi \in (0,2 \pi)$. 
+For $- \hat{n}$ we have $(\theta, \phi) \to (\pi - \theta , \phi + \pi) $.\\
+\includegraphics[scale=0.2]{fig/BlochSph.png}
+
+\paragraph{Monte Carlo Methods} Class of algorithms that rely on random sampling to obtain numerical results
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% QIT
+\section{Quantum Information Theory}
+\paragraph{Quantum probability}
+$Pr[|\Lambda] = \Trace{\Lambda \rho} $\\
+probabiity density: $\quad \rho \in \operatorname{Lin}(\mathcal{H}), \quad \rho \geq 0, \quad \Trace[p] =1$\\
+effect / measuremnt: $\Lambda \in \operatorname{Lin}(\mathcal{H}), \quad \Lambda \geq 0, \quad \Lambda \leq \mathbb{1}$
+
+\paragraph{POVM: postive operator valued measure} set of effects $\{ \Lambda (x)\}^n_{x=1}$ such that
+$\Lambda(x) \in \operatorname{Lin}(\mathcal{H}) : \Lambda(x) \geq 0 \ \forall x, \ \sum_x \Lambda(x) =$ $1$
+
+\paragraph{Trace (abstract)} $\Trace{\ketbra*{\Phi}{\Psi}} := \braket*{\Psi}{\Phi}$, then extend linearly. Then we have further\\
+$\Trace[ABC]= \Trace[CAB]$ and for basis transformations we habe $\Tr[U \rho U^* ]= \Tr[\rho]$\\
+
+\subsection{Composite Systems} 
+$\mathcal{H}_{AB} = \mathcal{H}_A \otimes \mathcal{H}_B$\\
+$\ket{+}_A\otimes \ket{+}_B = \ket*{++}_{AB} = \frac{1}{2} \ket*{00}_{AB}+ \ket*{01}_{AB}+ \ket*{10}_{AB}+\ket*{11}_{AB}$\\
+product state: $\ket{\Psi}\otimes \ket*{\phi} = \ket*{\Psi}_{AB} \quad$ entagled state: $\ket*{\Psi}_{AB}$ such that it cannot be written as productstate
+Partial trace $\Tr_{AB}[M_{AB}] = \Tr_A[\Tr_B[M_{AB}]]$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% QFT
+\section{Quantum Field Theory I}
+
+\paragraph{Basis transformation} $\{ \ket*{i} \to \ket*{\lambda} \}$  for orthonormal Basis:\\ 
+$\ket*{\lambda } = \sum_i \ket*{i} \ketbra*{i}{\lambda} \quad   \implies  \quad $ if $\hat{a}_i^\dagger \ket*{0} = \ket*{i}$ then 
+$\hat{a}_\lambda^\dagger \ket*{0} = \sum_i \ketbra*{i}{\lambda} \hat{a}_i^\dagger \ket{0} = \ket*{\lambda} $\\
+
+Like this any Hamitonian of the form $H=T+U+V$ (e.g.) \\ 
+$H=\sum_{i=1}^N \frac{\mathbf{p}_i^2}{2 m}-\sum_{i=1}^N \frac{Z e^2}{\left|\mathbf{x}_i\right|}+\sum_{i>j} \frac{e^2}{\left|\mathbf{x}_i-\mathbf{x}_j\right|}$
+can be written as:\\
+$H=\sum_{i, j} a_i^{\dagger}\langle i|T| j\rangle a_j+\sum_{i, j} a_i^{\dagger}\langle i|U| j\rangle a_j+\frac{1}{2} \sum_{i j k m}\langle i, j|V| k, m\rangle a_i^{\dagger} a_j^{\dagger} a_k a_m$
+
+\subsection{Lorentzinvariance}
+
+
+
+
+
+
+\end{document}
