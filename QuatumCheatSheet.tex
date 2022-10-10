@@ -50,6 +50,12 @@ For $- \hat{n}$ we have $(\theta, \phi) \to (\pi - \theta , \phi + \pi) $.\\
 
 \paragraph{Monte Carlo Methods} Class of algorithms that rely on random sampling to obtain numerical results
 
+\paragraph{Delta distribution}
+\begin{itemize}
+  \item $\int d x e^{i k \cdot x}=(2 \pi) \delta(k)$
+  \item $\int_{-\infty}^{+\infty} d x \delta(g(x))=\sum_i \frac{1}{\left|g^{\prime}\left(x_i\right)\right|} $
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% QIT
 \section{Quantum Information Theory}
 \paragraph{Quantum probability}
@@ -82,7 +88,24 @@ $H=\sum_{i=1}^N \frac{\mathbf{p}_i^2}{2 m}-\sum_{i=1}^N \frac{Z e^2}{\left|\math
 can be written as:\\
 $H=\sum_{i, j} a_i^{\dagger}\langle i|T| j\rangle a_j+\sum_{i, j} a_i^{\dagger}\langle i|U| j\rangle a_j+\frac{1}{2} \sum_{i j k m}\langle i, j|V| k, m\rangle a_i^{\dagger} a_j^{\dagger} a_k a_m$
 
+\paragraph{Klein Gordan equation} for real scalar fields. $\varphi (x) = \bar{\varphi}(\bar{x})$ implies that the equations of motion are the same:
+$$ (- \partial^2 + m^2)\phi(x)$$ with $\hbar \text{ and } c = 1$
+General solution given by $\varphi(x)=\int \widetilde{d k}\left[a(\mathbf{k}) e^{i k x}+a^*(\mathbf{k}) e^{-i k x}\right]$\\
+with $ \widetilde{d k} \equiv \frac{d^3 k}{(2 \pi)^3 2 \omega}$ and $a(\mathbf{k}$ arbitrary function of $\mathbf{k}$. Only quatization and the canonical commutation relations unveil $a(\mathbf{k})$ as annhilation operator. 
+We imposed that $\varphi(x)$ is real and introduced a Lorentz invariant differential for convience. $k x=\mathbf{k} \cdot \mathbf{x}-\omega t$ is the Lorentz four product. 
+
 \subsection{Lorentzinvariance}
+
+
+\paragraph{Lorentstransformations} $\left(\Lambda^{-1}\right)_{\ \nu}^\rho=\Lambda_\nu^{\ \rho}$
+
+\paragraph{Lorentz stuff dump}
+\begin{itemize}
+  \item invaraince integration measure: $d^4 \bar{x}=|\operatorname{det} \Lambda| d^4 x=d^4 x$
+  \item inverse Lorentz transformation: $\left(\Lambda^{-1}\right)_{\ \nu}^\rho=\Lambda_\nu^{\ \rho}$
+  \item $K^\mu K_\mu=\left(\frac{\omega}{c}\right)^2-k_x^2-k_y^2-k_z^2=\left(\frac{\omega_o}{c}\right)^2=\left(\frac{m_o c}{\hbar}\right)^2$ with $K^\mu = \left( \frac{\omega}{c} , \vec{k} \right)$
+\end{itemize}
+
 
 
 
