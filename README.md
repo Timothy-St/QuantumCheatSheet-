@@ -14,7 +14,7 @@ Dann schaut euch ein kurzes Git Tutorial an um zu verstehen was 1. Git ist, 2. e
 Dann Workflow: (alle Befehle in dem Ordner des Repos ausführen!)
 
 1. ***WICHTIG!!!!:*** Bevor ihr etwas neues hinzufügt macht ihr:
-   ```git pull```
+   ```git pull``` 
    Das bringt euer lokales Repo auf den neusten Stand. (lädt die neusten Änderungen von GitHub herunter)
 
 2. Ihr fügt eure Formel/Hinweise/Tricks/... hinzu.
