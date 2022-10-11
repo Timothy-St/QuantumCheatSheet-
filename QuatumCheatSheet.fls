@@ -361,10 +361,10 @@ INPUT /Users/timostroschein/Desktop/Latex Zusammenfdassung /QuantumCheatSheet/fi
 INPUT /Users/timostroschein/Desktop/Latex Zusammenfdassung /QuantumCheatSheet/fig/BlochSph.png
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm0500.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
 INPUT /usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /Users/timostroschein/Desktop/Latex Zusammenfdassung /QuantumCheatSheet/QuatumCheatSheet.aux
 INPUT /Users/timostroschein/Desktop/Latex Zusammenfdassung /QuantumCheatSheet/QuatumCheatSheet.out

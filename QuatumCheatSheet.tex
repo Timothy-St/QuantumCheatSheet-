@@ -60,8 +60,10 @@ For $- \hat{n}$ we have $(\theta, \phi) \to (\pi - \theta , \phi + \pi) $.\\
 \section{Quantum Information Theory}
 \paragraph{Quantum probability}
 $Pr[|\Lambda] = \Trace{\Lambda \rho} $\\
-probabiity density: $\quad \rho \in \operatorname{Lin}(\mathcal{H}), \quad \rho \geq 0, \quad \Trace[p] =1$\\
-effect / measuremnt: $\Lambda \in \operatorname{Lin}(\mathcal{H}), \quad \Lambda \geq 0, \quad \Lambda \leq \mathbb{1}$
+probabity density: $\quad \rho \in \operatorname{Lin}(\mathcal{H}), \quad \rho \geq 0, \quad \Trace[p] =1$\\
+effect / measuremnt: $\Lambda \in \operatorname{Lin}(\mathcal{H}), \quad \Lambda \geq 0, \quad \Lambda \leq \mathbb{1}$\\
+
+positivity of operators: $S \geq 0$ if $\langle v|S| v\rangle \geq 0 \text { for all } v \in \mathcal{H}$
 
 \paragraph{POVM: postive operator valued measure} set of effects $\{ \Lambda (x)\}^n_{x=1}$ such that
 $\Lambda(x) \in \operatorname{Lin}(\mathcal{H}) : \Lambda(x) \geq 0 \ \forall x, \ \sum_x \Lambda(x) =$ $1$
@@ -71,9 +73,28 @@ $\Trace[ABC]= \Trace[CAB]$ and for basis transformations we habe $\Tr[U \rho U^*
 
 \subsection{Composite Systems} 
 $\mathcal{H}_{AB} = \mathcal{H}_A \otimes \mathcal{H}_B$\\
-$\ket{+}_A\otimes \ket{+}_B = \ket*{++}_{AB} = \frac{1}{2} \ket*{00}_{AB}+ \ket*{01}_{AB}+ \ket*{10}_{AB}+\ket*{11}_{AB}$\\
-product state: $\ket{\Psi}\otimes \ket*{\phi} = \ket*{\Psi}_{AB} \quad$ entagled state: $\ket*{\Psi}_{AB}$ such that it cannot be written as productstate
+$\ket{+}_A\otimes \ket{+}_B = \ket*{++}_{AB} = \frac{1}{2} (\ket*{00}_{AB}+ \ket*{01}_{AB}+ \ket*{10}_{AB}+\ket*{11}_{AB})$\\
+product state: $\ket{\Psi}\otimes \ket*{\phi} = \ket*{\Psi}_{AB} \quad$ entagled state: $\ket*{\Psi}_{AB}$ such that it cannot be written as productstate.\\
 Partial trace $\Tr_{AB}[M_{AB}] = \Tr_A[\Tr_B[M_{AB}]]$
+
+\paragraph{Technical stuff}
+\begin{itemize}
+  \item Pauli Operators: $\sigma_1=\left(\begin{array}{cc}
+    0 & 1 \\
+    1 & 0
+    \end{array}\right), \quad \sigma_2=\left(\begin{array}{cc}
+    0 & -\mathrm{i} \\
+    \mathrm{i} & 0
+    \end{array}\right), \quad \sigma_3=\left(\begin{array}{cc}
+    1 & 0 \\
+    0 & -1
+    \end{array}\right)$
+  \item $\left[\sigma_i, \sigma_j\right]=2 i \varepsilon_{i j k} \sigma_k$
+  \item porbability density is pure state iff: $\Tr[p^2]=1$
+  \item positivity of operators: $S \geq 0$ if $\langle v|S| v\rangle \geq 0 \text { for all } v \in \mathcal{H}. \quad $ $\longrightarrow \quad$ $S$ is hermitian
+
+
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% QFT
