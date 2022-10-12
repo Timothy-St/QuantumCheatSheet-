@@ -24,7 +24,9 @@ $$
 \exp(t A) \exp(t B)= \exp \left(t A+t B+\frac{t^2}{2}[A, B]
 +\frac{t^3}{12} [A,[A, B]] +\frac{t^3}{12}[B,[B, A]]+\mathscr{O}\left(t^4\right)\right)
 $$
- 
+
+\paragraph{Creation-/Annihilation Operators}in second quantisation:
+$$\left[\hat{a}_i^*, \hat{a}_j^*\right]=0, \quad\left[\hat{a}_i, \hat{a}_j\right]=0, \quad\left[\hat{a}_i, \hat{a}_j^*\right]=\delta_{i, j} \hat{\mathrm{id}}$$
 
 
 \paragraph{Bernoulli Trial} Probability of $k$ successes in a bernoulli experiment $B(n,p)$:
@@ -55,6 +57,44 @@ For $- \hat{n}$ we have $(\theta, \phi) \to (\pi - \theta , \phi + \pi) $.\\
   \item $\int d x e^{i k \cdot x}=(2 \pi) \delta(k)$
   \item $\int_{-\infty}^{+\infty} d x \delta(g(x))=\sum_i \frac{1}{\left|g^{\prime}\left(x_i\right)\right|} $
 \end{itemize}
+
+%%% Math stuff dump 
+
+\paragraph{Fourier transform } For $\varphi \in \mathscr{S}\left(\mathbb{R}^n\right)$:\\
+(i) $\left(\partial_j \varphi\right)^{\wedge}(k)=i k_j \hat{\varphi}(k)$\\
+(ii) $\partial_j \hat{\varphi}(k)=\frac{\partial}{\partial k_j} \hat{\varphi}(k)=\left(-i x_j \varphi\right)^{\wedge}(k)$\\
+(iii) $\left(\partial_j \varphi\right)^{\vee}(k)=-i k_j \check{\varphi}(k)$\\
+(iv) $\partial_j \check{\varphi}(k)=\left(i x_j \varphi\right)^{\vee}(k)$\\
+(v) $\mathcal{F}_x\left[e^{-a x^2}\right](k)=\sqrt{\frac{\pi}{a}} e^{k^2 a} \quad $ Normalsation 1; osc factor 1
+
+
+%%%%%%%%%%%%%%%%%%% Quantum mechanics I & II
+\section{Quantum Mechanics I \& II}
+
+\paragraph{Propagator} characterised through \\
+(i) $U(t, t)=\mathbf{I}$.\\
+(ii) additivity/ unitar: $U(t, s) U(s, r)=U(t, r)$.\\
+(iii) The operator $U(t, s)$ satisfies the differential equation
+$$
+i \hbar \partial_t U(t, s)=H U(t, s)
+$$
+For $H$ time independent: $U(t, s)=\exp \left(-i H \frac{(t-s)}{\hbar}\right)$\\
+General: $U(t, s)=\mathcal{T} \exp \left[-\frac{i}{\hbar} \int_s^t d t^{\prime} H\left(t^{\prime}\right)\right]$
+For $[H(t),H(s)]=0 \ \forall t,s$ we can omit the time order operator $\mathcal{T}$
+
+\paragraph{Heisenberg picture} Time dependecy is shifted from states to operators:\\
+$$\Psi_H= \Psi(t_0) = U\left(t_0, t\right) \Psi_S(t) \quad \quad A_H=U\left(t_0, t\right) A_S U\left(t, t_0\right)$$
+The equation of motion in the Heisenberg picture: 
+$$i \hbar \frac{d}{d t} A_H(t) = \left[A_H, H_H\right]+i \hbar \partial_t A_H$$
+For $\partial_t H=0$ we have $H_H=H_S$ and $A_H(t)=e^{i H\left(t-t_0\right) / \hbar} A e^{-i H\left(t-t_0\right) / \hbar}$\\
+\emph{The Heisenberg picture shows the similaritiy to classical mechanics where we have $\frac{d A}{d t}=\{A, H\}+\partial_t A$.
+Replacing the Poisson braket with commutators and imposing the canonical commutator relations gives rise to qunatisation. }
+
+\paragraph{Interaction (Dirac) picture} For $H=H_0+H^{\prime}(t)$. Idea is to shift (trivial) time dependence
+of states originating from $H_0$ on to operators: $\Psi_D(t)=U_D\left(t, t_0\right) \Psi_D\left(t_0\right) $ with 
+$U_D\left(t, t_0\right)=U_0\left(t_0, t\right) U\left(t, t_0\right)$ where $U$ is the Propagator for $H=H_0 +H'$. We have 
+$$i \hbar \partial_t U_D = =H_D^{\prime} U_D$$
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% QIT
 \section{Quantum Information Theory}
